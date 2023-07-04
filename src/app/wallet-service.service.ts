@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class WalletServiceService {
   private walletAmount: number = 0;
   private displayError: boolean = false;
+  private initialWalletAmount: number = 0;
 
   private walletAmountSubject = new BehaviorSubject<any>(null);
   private displayErrorSubject = new BehaviorSubject<any>(null);
@@ -41,9 +42,14 @@ export class WalletServiceService {
 
     //else just render random walletAmount
     this.walletAmount = parseFloat((Math.random() * 100000).toFixed(2));
+    this.initialWalletAmount = this.walletAmount;
   }
 
   getWalletAmount() {
     return this.walletAmount;
+  }
+
+  getInitialWalletAmount() {
+    return this.initialWalletAmount;
   }
 }

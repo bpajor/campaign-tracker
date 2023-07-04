@@ -91,10 +91,17 @@ export class AddingFormComponent implements OnInit {
 
     if (this.campaignForm.valid) {
       if (
-        this.walletService.getWalletAmount() - campaignData.campaignFund <
-        0
+        this.walletService.getWalletAmount() - campaignData.campaignFund < 0 &&
+        !this.isEditMode
       ) {
         this.walletService.setError(); //set error to header wallet amount if campaignFund makes wallet negative
+        return;
+      }
+
+      if (
+        campaignData.campaignFund > this.walletService.getInitialWalletAmount()
+      ) {
+        this.walletService.setError();
         return;
       }
 
@@ -106,7 +113,7 @@ export class AddingFormComponent implements OnInit {
         this.formDataService.incrementId(); //increment id to get it unique
         campaignData = {
           ...campaignData,
-          id: this.formDataService.getId(),  //asign unique id
+          id: this.formDataService.getId(), //asign unique id
         };
         this.formDataService.setFormData(campaignData);
         this.walletService.setWalletAmount(campaignData.campaignFund);

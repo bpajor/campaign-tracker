@@ -22,7 +22,7 @@ export class FormDataServiceService {
   }
 
   deleteItem(id: number) {
-    const objToDelete = this.formData.find(obj => obj.id === id);
+    const objToDelete = this.formData.find((obj) => obj.id === id);
     this.walletService.setWalletAmount(-objToDelete.campaignFund); // increment wallet Amount if item is going to be removed
     this.formData = this.formData.filter((obj) => obj.id !== id);
     this.formDataSubject.next(this.formData); //inform subscribers about changes
@@ -55,6 +55,7 @@ export class FormDataServiceService {
   editFormData(obj: any) {
     const objIndex = this.formData.findIndex((object) => object.id === obj.id);
     const diffAmount = obj.campaignFund - this.formData[objIndex].campaignFund;
+    
     this.formData[objIndex] = obj;
     this.walletService.setWalletAmount(diffAmount);
     this.formDataSubject.next(this.formData); //inform subscribers about changes

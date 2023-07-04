@@ -8,7 +8,7 @@ import { FormDataServiceService } from '../form-data-service.service';
 })
 export class CampaignAddingSectionComponent {
   private subscription: any;
-  
+
   showButton = true; //control showing button
   formDataToEdit: any; //holds Data from submitted form
   isEditMode: boolean = false; //control showing edit form
