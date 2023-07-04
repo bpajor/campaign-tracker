@@ -29,11 +29,15 @@ Make sure you have [Node.js](https://nodejs.org/) and [Angular CLI](https://angu
     ```sh
     cd campaign-tracker
 
-3. Run the application:
+3. Run:
+    ```sh
+    npm install
+
+4. Run the application:
     ```sh
     ng serve
 
-4. Open your browser and go to **http://localhost:4200**
+5. Open your browser and go to **http://localhost:4200**
 
 ## Contact
 
