@@ -1,6 +1,6 @@
 # Campaign Tracker
 
-Campaign Tracker is a simple web application for managing marketing campaigns. It allows users to add, edit, and track campaigns in a centralized location.
+Campaign Tracker is a simple web application for managing marketing campaigns. It allows users to add, edit, and track campaigns in a centralized location. You can see this site on: https://endearing-froyo-c08dd9.netlify.app/
 
 ## Features
 
