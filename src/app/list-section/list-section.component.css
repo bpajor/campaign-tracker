@@ -1,0 +1,101 @@
+.list-no-results {
+  margin-top: 200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-no-result {
+  color: black;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.square-item {
+  background-color: #3D0868;
+  border-radius: 20px;
+  margin-left: 120px;
+  margin-bottom: 50px;
+  height: 350px;
+  width: 350px;
+  border: 2px solid black;
+}
+
+.campaign-name {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 5px;
+}
+
+.campaign-item {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 20%;
+    border-radius: 10px;
+    background-color: wheat;
+    border: 2px solid black;
+    font-weight: bold;
+    height: 40px;
+}
+
+select {
+    margin-left: 10px;
+    height: 25px;
+}
+
+button:hover {
+  background-color: rgb(182, 148, 84);
+}
+
+@media screen and (max-width: 975px) {
+    ul {
+      display: flex;
+      flex-flow: column;
+      gap: 50px;
+      align-items: center;   
+    }
+  
+    .square-item {
+      height: 200px;
+      width: 200px;
+      margin-left: 0;
+    }
+
+    .campaign-name {
+        font-size: 1.3rem;
+    }
+
+    .campaign-item {
+        margin: 5px;
+        font-size: 0.7rem;
+    }
+
+    button {
+        width: 30%;
+    }
+}

@@ -1,0 +1,4 @@
+<header>
+    <p class="title-container">{{ title }}</p>
+    <p [ngClass]="{'error': walletError}">You have: {{walletAmount.toFixed(2)}}$</p>
+</header>

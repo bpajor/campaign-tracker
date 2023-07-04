@@ -1,0 +1,53 @@
+header {
+    margin: 0;
+    padding: 0 20px;
+    background-color: #bdb08c;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative; 
+}
+
+.title-container {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.error {
+    animation-name: error;
+    animation-duration: 2s;
+}
+
+@keyframes error {
+    50% {
+        transform: scaleX(1.2) scaleY(2);
+        color: red;
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+        color: black;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    header {
+        font-size: 0.7em;
+        position: static;
+        flex-flow: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-container {
+        position: static;
+        transform: translateX(0%);
+        left: 0%;
+    }
+}

@@ -1,0 +1,5 @@
+<section [ngClass]="{ 'with-button': showButton, 'with-form': !showButton }">
+  <button *ngIf="showButton" (click)="toggleShowButton()">Add Campaign</button>
+  <adding-form *ngIf="!showButton && !formDataToEdit"></adding-form>
+  <adding-form *ngIf="!showButton && isEditMode" [formDataToEdit]="formDataToEdit"></adding-form>
+</section>

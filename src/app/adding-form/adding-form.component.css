@@ -1,0 +1,120 @@
+form {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    background-color: #3D0868;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    width: 350px;
+}
+
+label {
+    width: 130px;
+    text-align: right;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+input {
+    height: 15px;
+}
+
+select {
+    width: 50.5%;
+    height: 25px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+button {
+    width: 20%;
+    border-radius: 10px;
+    background-color: wheat;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(182, 148, 84);
+}
+
+.no-result {
+    display: none;
+}
+
+.error-background {
+    background-color: red;
+  }
+
+/* input.ng-invalid.ng-touched {
+    background-color: red;
+} */
+
+/* form.ng-submitted.input.ng-invalid.ng-pristine.ng-untouched {
+    background-color: red;
+} */
+
+
+@media screen and (max-height: 474px) {
+    .form-group {
+        height: 10px;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    input {
+        height: 7px;
+    }
+    
+    select {
+        height: 12px;
+        font-size: 0.5rem;
+    }
+
+    button {
+        height: px;
+    }
+
+    .form-button {
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    form {
+        width: 200px;
+    }
+
+    label {
+        font-size: 0.5rem;
+    }
+
+    input {
+        width: 134px;
+    }
+
+    select {
+        width: 300px;
+        font-size: 0.5rem;
+    }
+
+    .form-group {
+        justify-content: space-around;
+    }
+
+    button {
+        width: 60px;
+        height: 25px;
+    }
+}

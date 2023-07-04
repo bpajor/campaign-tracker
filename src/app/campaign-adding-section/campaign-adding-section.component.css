@@ -1,0 +1,32 @@
+.with-button {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.with-form {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #3D0868;
+    color: white;
+    height: 60%;
+    border-radius: 20%;
+    border: 1px solid black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: #633886;
+}
+
+@media screen and (max-height: 716px) {
+    .with-form {
+        height: 80%;
+    }
+}

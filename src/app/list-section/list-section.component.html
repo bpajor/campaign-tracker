@@ -1,0 +1,36 @@
+<section *ngIf="elements.length === 0" class="list-no-results">
+  <p class="message-no-result">No results found!</p>
+</section>
+<section *ngIf="elements.length > 0">
+  <ul>
+    <li *ngFor="let element of elements" class="square-item">
+      <p class="campaign-name">{{ element.campaignName }}</p>
+      <p class="campaign-item"><span>Keyword: </span>{{ element.keywords }}</p>
+      <p class="campaign-item">
+        <span>Bid Amount: </span>{{ element.bidAmount }}$
+      </p>
+      <p class="campaign-item">
+        <span>Campaign Fund: </span>{{ element.campaignFund }}$
+      </p>
+      <p class="campaign-item">
+        <span>Status: </span>
+        {{ element.status }}
+        <select
+          [(ngModel)]="element.status"
+          (ngModelChange)="onStatusChange(element.id, element.status)"
+        >
+          <option value="on">On</option>
+          <option value="off">Off</option>
+        </select>
+      </p>
+      <p class="campaign-item">
+        <span>Town: </span>{{ element.town ? element.town : "Not specified" }}
+      </p>
+      <p class="campaign-item"><span>Radius: </span>{{ element.radius }} km</p>
+      <div class="button-group">
+        <button (click)="onItemUpdate(element.id)">Edit</button>
+        <button (click)="onItemDelete(element.id)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</section>
