@@ -35,8 +35,8 @@ export class AddingFormComponent implements OnInit {
     this.campaignForm = this.fb.group({
       campaignName: ['', Validators.required],
       keywords: ['', Validators.required],
-      bidAmount: [null, [Validators.required, Validators.min(1)]],
-      campaignFund: [null, Validators.required],
+      bidAmount: [null, [Validators.required, Validators.min(100)]],
+      campaignFund: [null, [Validators.required, Validators.min(1)]],
       status: ['on', Validators.required],
       town: [null],
       radius: [null, Validators.required],
